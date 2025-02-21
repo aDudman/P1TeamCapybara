@@ -11,18 +11,18 @@ namespace Environment.Interactables
         private Rigidbody moveableRigidbody { get; set; }
 
         // The amount of frames needed for the velocity to be cancelled out.
-        private int shoveFrameCount { get; set; }
+        protected int shoveFrameCount { get; set; }
 
         [SerializeField, Tooltip("A higher resistance mod will make the object move slower compared to the player.")]
         [Range(.01f, 1000f)]
         private float ResistanceMod;
 
-        void Start()
+        protected virtual void Start()
         {
             moveableRigidbody = GetComponent<Rigidbody>();
         }
 
-        void FixedUpdate()
+        protected virtual void FixedUpdate()
         {
             // Cancelling out the velocity after x frames.
             if (shoveFrameCount > 0)

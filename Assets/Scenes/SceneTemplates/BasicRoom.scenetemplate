@@ -62,9 +62,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   templateScene: {fileID: 102900000, guid: 27c8915b8f1395a46be1fce5a1ce202d, type: 3}
   templateName: Basic Room
-  description: 'A basic room with up to 4 '
+  description: A basic room with up to 4 transitions
   preview: {fileID: -6523191993226010351}
   dependencies:
+  - dependency: {fileID: 7060260748117889190, guid: 27153e6c5c95cc54488cbcc9b7044233, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 2100000, guid: 5039a1876e10262418e8dbdb12385795, type: 2}
+    instantiationMode: 1
   - dependency: {fileID: 8598906496191306663, guid: 18698fa5f61627a4bb52e10caa7eae2e, type: 3}
     instantiationMode: 1
   - dependency: {fileID: 4631275828374503907, guid: c283c7000bd1d3142bfe887dca5794ea, type: 3}
@@ -73,6 +77,6 @@ MonoBehaviour:
     instantiationMode: 1
   - dependency: {fileID: 2800000, guid: 5f2a108eb023faf43a809979fd3d38f2, type: 3}
     instantiationMode: 1
-  templatePipeline: {fileID: 0}
+  templatePipeline: {fileID: 11500000, guid: 22ae3f012ae97dd42863994eca48eada, type: 3}
   badge: {fileID: 0}
-  addToDefaults: 0
+  addToDefaults: 1

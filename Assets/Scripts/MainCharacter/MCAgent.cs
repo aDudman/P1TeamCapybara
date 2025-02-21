@@ -36,6 +36,9 @@ namespace MainCharacter
         [SerializeField, Tooltip("The component that is able to handle picking up logic.")]
         private Extensions.MCAgentPickupController pickupController;
 
+        [SerializeField, Tooltip("The animator for the player.")]
+        private Animator animator;
+
         // This region only accepts inputs that the player will be using.  It will only pull from the global input system.
         // Set these on Start.
         #region Input Action
@@ -83,10 +86,19 @@ namespace MainCharacter
                 transform.LookAt(transform.position + characterCompleteMoveV3);
 
                 ShoveObject(ref characterCompleteMoveV3);
+
+                animator.SetBool("Moving", true);
+            }
+            else
+            {
+                animator.SetBool("Moving", false);
             }
 
             characterController.Move(characterCompleteMoveV3 * Time.fixedDeltaTime);
+        }
 
+        private void Update()
+        {
             if (!inputDisabled)
             {
                 // Code block for picking up and dropping small objects in the scene.

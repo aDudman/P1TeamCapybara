@@ -56,6 +56,10 @@ namespace MainCharacter
         {
             MCAGENT = this;
             inputDisabled = false;
+            if (spell != null)
+            {
+                EnableSpells();
+            }
             movementAction = InputSystem.actions.FindAction("Move");
             actionAction = InputSystem.actions.FindAction("Action");
         }
@@ -135,7 +139,7 @@ namespace MainCharacter
             if (spellsEnabled && cast)
             {
                 var spellEffect = Instantiate(spell, transform.position, transform.rotation);
-                StartCoroutine(castDelay(3.0f));
+                StartCoroutine(castDelay(1.0f));
             }
         }
 

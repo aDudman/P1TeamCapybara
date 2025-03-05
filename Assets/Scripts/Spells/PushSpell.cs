@@ -44,7 +44,7 @@ namespace Spells
         private void OnTriggerEnter(Collider other)
         {
             IPushable pushable = other.GetComponent<IPushable>();
-            if(pushable != null)
+            if(pushable != null && !other.isTrigger)
             {
                 pushable.Push(transform.forward, force);
             }

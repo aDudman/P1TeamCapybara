@@ -53,7 +53,7 @@ namespace Enemies
             OnDeath += Die;
         }
 
-        private void Activate()
+        private void Activate(GameObject _)
         {
             loaded = true;
         }

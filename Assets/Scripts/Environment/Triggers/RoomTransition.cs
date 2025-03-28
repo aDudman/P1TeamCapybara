@@ -31,7 +31,7 @@ namespace Environment.Triggers
         [SerializeField, Tooltip("The western door")]
         private Door leftDoor;
 
-        public event System.Action OnRoomEnter;
+        public event System.Action<GameObject> OnRoomEnter;
         public event System.Action OnRoomExit;
 
         private void Start()
@@ -52,7 +52,7 @@ namespace Environment.Triggers
 
                 if (OnRoomEnter != null)
                 {
-                    OnRoomEnter.Invoke();
+                    OnRoomEnter.Invoke(other.gameObject);
                 }
 
                 AdjacentRooms adjacentRooms = roomManager.GetAdjacentRooms(roomData.position);

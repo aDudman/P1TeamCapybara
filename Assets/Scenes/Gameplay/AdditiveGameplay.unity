@@ -175,6 +175,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2928984256869421424, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
+      propertyPath: spell
+      value: 
+      objectReference: {fileID: 1917575555138074777, guid: 188aa47739fc69c4ca9933c43cf03d79, type: 3}
+    - target: {fileID: 2928984256869421424, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 1406632269}
@@ -182,8 +186,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 6331293541870683824, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331293541870683824, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.18
+      objectReference: {fileID: 0}
     - target: {fileID: 7937372987043455741, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490555644187202875, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490555644187202875, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
+      propertyPath: m_StepOffset
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -612,9 +632,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1e861691af787f44582a19415b485d2b, type: 2}
   - {fileID: 11400000, guid: 73e6ef11fb0693d4797ce0365627b89a, type: 2}
   - {fileID: 11400000, guid: 2dda4c40be0aac34582a3937835f07d1, type: 2}
-  - {fileID: 11400000, guid: 613c8a2fa82833f40bdcc8943bd3daa0, type: 2}
-  - {fileID: 11400000, guid: 1016188e8aa734c4a94d6a113ea44800, type: 2}
-  - {fileID: 11400000, guid: a9c7935953d9d6e4488ff3dcaaf073aa, type: 2}
+  - {fileID: 11400000, guid: efa38def711bd0d44b5e027da16faa2d, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

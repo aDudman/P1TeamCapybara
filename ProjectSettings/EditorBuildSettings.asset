@@ -36,4 +36,5 @@ EditorBuildSettings:
     path: Assets/Scenes/DevTestingScenes/AdditiveRoomEast.unity
     guid: f65df8c79526b3b4c96f74e71db6e9f8
   m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 24ded7d2f4fe3ec5cae61f1d0c4157d6, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: dae7474ca3b5a951cbd6448f958c8b53, type: 3}

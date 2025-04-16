@@ -17,12 +17,17 @@ namespace Enemies
         [SerializeField]
         private Rigidbody body;
 
+        [SerializeField]
+        private DetectionRadius detectionRadius;
+
         private bool loaded = false;
 
         [SerializeField, Tooltip("The room this enemy is in.")]
         private RoomTransition roomTransition;
 
         private Coroutine hitstun;
+
+        private GameObject player;
 
         public void Push(Vector3 direction, float force)
         {
@@ -42,6 +47,12 @@ namespace Enemies
         {
             base.Start();
 
+            if (detectionRadius != null)
+            {
+                detectionRadius.OnPlayerEnter += seePlayer;
+                detectionRadius.OnPlayerExit += losePlayer;
+            }
+
             if (roomTransition == null)
             {
                 // This doesn't seem to reliably find the RoomTransition from the same scene
@@ -51,6 +62,25 @@ namespace Enemies
             roomTransition.OnRoomEnter += Activate;
             roomTransition.OnRoomExit += Deactivate;
             OnDeath += Die;
+        }
+
+        public void FixedUpdate()
+        {
+            if (loaded && !stopAccelerating && player != null)
+            {
+                Vector3 direction = (player.transform.position - transform.position);
+                direction.y = 0;
+                direction.Normalize();
+
+                body.velocity += direction * acceleration * Time.deltaTime;
+
+                if (body.velocity.magnitude > maxSpeed)
+                {
+                    //Debug.Log("Clamping");
+                    body.velocity = direction * maxSpeed;
+                }
+
+            }
         }
 
         private void Activate(GameObject _)
@@ -67,6 +97,13 @@ namespace Enemies
         {
             roomTransition.OnRoomEnter -= Activate;
             roomTransition.OnRoomExit -= Deactivate;
+
+            if (detectionRadius != null)
+            {
+                detectionRadius.OnPlayerEnter -= seePlayer;
+                detectionRadius.OnPlayerExit -= losePlayer;
+            }
+
             Destroy(gameObject);
         }
 
@@ -78,39 +115,14 @@ namespace Enemies
 
         private bool stopAccelerating = false;
 
-        /// <summary>
-        /// Moves towards the player when they are in range.
-        /// </summary>
-        /// <param name="other"></param>
-        private void OnTriggerStay(Collider other)
+        public void seePlayer(GameObject player)
         {
-            if (loaded && !stopAccelerating && other.CompareTag(StaticTagStrings.PLAYER))
-            {
-                Vector3 direction = (other.transform.position - transform.position);
-                direction.y = 0;
-                direction.Normalize();
-
-                body.velocity += direction * acceleration * Time.deltaTime;
-
-                if (body.velocity.magnitude > maxSpeed)
-                {
-                    //Debug.Log("Clamping");
-                    body.velocity = direction * maxSpeed;
-                }
-
-            }
+            this.player = player;
         }
 
-        /// <summary>
-        /// Stops moving when the player leaves the trigger.
-        /// </summary>
-        /// <param name="other"></param>
-        private void OnTriggerExit(Collider other)
+        public void losePlayer()
         {
-            if (loaded && !stopAccelerating && other.CompareTag(StaticTagStrings.PLAYER))
-            {
-                body.velocity = Vector3.zero;
-            }
+            this.player = null;
         }
 
         /// <summary>
@@ -137,13 +149,6 @@ namespace Enemies
             Debug.Log("Hitstun over");
 
             stopAccelerating = false;
-        }
-
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 }

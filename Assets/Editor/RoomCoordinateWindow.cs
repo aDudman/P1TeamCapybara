@@ -2,7 +2,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-namespace SceneTemplate
+namespace Editor
 {
     public class RoomCoordinateWindow : EditorWindow
     {

@@ -8,7 +8,7 @@ using System;
 using UnityEditor.SceneManagement;
 using Environment.Triggers;
 
-namespace SceneTemplate
+namespace Editor
 {
     public class BasicRoomPipeline : ISceneTemplatePipeline
     {

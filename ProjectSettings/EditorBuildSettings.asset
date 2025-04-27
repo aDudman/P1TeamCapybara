@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PulsePushTestScene.unity
     guid: d555f84a0352e7f47beee3bdbc07849b
+  - enabled: 0
+    path: Assets/Scenes/Gameplay/Initialize.unity
+    guid: 33d63dcde1d264340a8f4ebd5f76a46b
   - enabled: 1
     path: Assets/Scenes/Gameplay/AdditiveGameplay.unity
     guid: 520345ac7bf016c4c8acfef58dace473

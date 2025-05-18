@@ -1,10 +1,16 @@
 name: Actions
 
-on: [push, pull_request]
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - Development
 
 jobs:
   build:
     name: Build my project
+    if: github.event.pull_request.merged == true
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
@@ -54,12 +60,20 @@ jobs:
         with:
             args: zip -qq -r Build.zip build
 
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@v1.73
+        id: version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # if you don't want to set write permissions use a PAT token
+          TAG_PREFIX: v
+          PRERELEASE: true
+
       - name: Release
         uses: svenstaro/upload-release-action@v2
         with:
             repo_token: ${{ github.token }}
             asset_name: Build.zip
             file: Build.zip
-            tag: release
+            tag: ${{ steps.version.outputs.new_tag }}
             overwrite: true
             body: I'll plan to put something here later

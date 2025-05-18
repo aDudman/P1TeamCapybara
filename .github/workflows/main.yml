@@ -1,0 +1,79 @@
+name: Actions
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - Development
+
+jobs:
+  build:
+    name: Build my project
+    if: github.event.pull_request.merged == true
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      # Cache
+      - uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      # Test
+      # No tests are configured, so skip this step for now
+      #- name: Run tests
+      #  uses: game-ci/unity-test-runner@v4
+      #  env:
+      #    UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+      #    UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      #    UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+      #  with:
+      #    githubToken: ${{ github.token }}
+
+      # Build
+      - name: Build project
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: StandaloneWindows64
+
+      # Output
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Build
+          path: build
+
+      - name: Zip Build
+        uses: montudor/action-zip@v1
+        with:
+            args: zip -qq -r Build.zip build
+
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@v1.73
+        id: version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # if you don't want to set write permissions use a PAT token
+          TAG_PREFIX: v
+          PRERELEASE: true
+
+      - name: Release
+        uses: svenstaro/upload-release-action@v2
+        with:
+            repo_token: ${{ github.token }}
+            asset_name: Build.zip
+            file: Build.zip
+            tag: ${{ steps.version.outputs.new_tag }}
+            overwrite: true
+            body: I'll plan to put something here later

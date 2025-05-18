@@ -5,36 +5,51 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestingScene.unity
     guid: cc59596e418ce4e8a9a5b296e35eac0c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PulsePushTestScene.unity
     guid: d555f84a0352e7f47beee3bdbc07849b
+  - enabled: 0
+    path: Assets/Scenes/Gameplay/Initialize.unity
+    guid: 33d63dcde1d264340a8f4ebd5f76a46b
   - enabled: 1
     path: Assets/Scenes/Gameplay/AdditiveGameplay.unity
     guid: 520345ac7bf016c4c8acfef58dace473
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DevTestingScenes/AdditiveRoom1.unity
     guid: 11bc06b0425d94a44b312374d18c4e49
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DevTestingScenes/AdditiveRoom2.unity
     guid: bd707c566439d7749b17281ecf79a59f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DevTestingScenes/HolosTestingScene.unity
     guid: 6dcee24cf45955d70b49434953bee5a0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DevTestingScenes/AdditiveRoomNorth.unity
     guid: 9d835e05eddcf6c40a522b0401ea9b4b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DevTestingScenes/AdditiveRoomWest.unity
     guid: bd1a0b4c16111364c9b843919ebe9b8a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DevTestingScenes/AdditiveRoomEast.unity
     guid: f65df8c79526b3b4c96f74e71db6e9f8
+  - enabled: 1
+    path: Assets/Scenes/StartDungeon/StartingRoom.unity
+    guid: 684c7ed9e1f9f0b4f9a5e3be871d8cb8
+  - enabled: 1
+    path: Assets/Scenes/StartDungeon/BossRoom.unity
+    guid: d947a8b3059250642af9e930ed89f46a
+  - enabled: 1
+    path: Assets/Scenes/StartDungeon/BarrierRoom.unity
+    guid: 10ad5957ffff47e468ea9e0fb19c6895
+  - enabled: 1
+    path: Assets/Scenes/StartDungeon/PostBossRoom.unity
+    guid: 427462b75f954d64cab8021825c51ed0
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 24ded7d2f4fe3ec5cae61f1d0c4157d6, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: dae7474ca3b5a951cbd6448f958c8b53, type: 3}

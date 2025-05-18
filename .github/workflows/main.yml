@@ -61,7 +61,7 @@ jobs:
             args: zip -qq -r Build.zip build
 
       - name: Bump version and push tag
-        uses: anothrNick/github-tag-action@v1.73
+        uses: anothrNick/github-tag-action@v1
         id: version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # if you don't want to set write permissions use a PAT token

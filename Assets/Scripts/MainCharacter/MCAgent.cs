@@ -48,9 +48,6 @@ namespace MainCharacter
         private InputAction actionAction { get; set; }
         #endregion
 
-
-
-
         void Start()
         {
             MCAGENT = this;
@@ -182,6 +179,19 @@ namespace MainCharacter
             outMove = difference.normalized * playerSpeed;
 
             return outMove;
+        }
+
+        public void AddSpell(GameObject spellPrefab)
+        {
+            if (spellPrefab != null)
+            {
+                spell = spellPrefab;
+                EnableSpells();
+            }
+            else
+            {
+                Debug.LogWarning("Attempted to add a null spell prefab.");
+            }
         }
 
         public void EnableSpells()

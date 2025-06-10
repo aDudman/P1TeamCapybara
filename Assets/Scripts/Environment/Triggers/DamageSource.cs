@@ -12,10 +12,10 @@ namespace Environment.Triggers
         private int damage;
 
         [SerializeField, Tooltip("True if this can damage the player")]
-        private bool canHitPlayer;
+        protected bool canHitPlayer;
 
         [SerializeField, Tooltip("True if this can damage enemies")]
-        private bool canHitEnemies;
+        protected bool canHitEnemies;
 
         [SerializeField, Tooltip("True if this source continues doing damage to a target which stays in it.")]
         private bool isContinuous;
@@ -41,6 +41,17 @@ namespace Environment.Triggers
         {
             if (!isContinuous) { return; }
             HandleDamage(other);
+        }
+
+        /// <summary>
+        /// Modifies the alignment of this damage source, allowing it to hit either the player, enemies, or both.
+        /// </summary>
+        /// <param name="player">True if it can damage the player</param>
+        /// <param name="enemies">True if it can damage enemies</param>
+        public void ModifyAlignment(bool player, bool enemies)
+        {
+            canHitPlayer = player;
+            canHitEnemies = enemies;
         }
 
         private void HandleDamage(Collider other)

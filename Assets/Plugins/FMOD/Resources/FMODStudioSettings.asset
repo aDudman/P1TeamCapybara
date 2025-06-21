@@ -560,7 +560,12 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks: []
+  Banks:
+  - Music
+  - SFX_Combat
+  - SFX_Env
+  - SFX_UI
+  - VO_Bank
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

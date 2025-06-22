@@ -1,7 +1,4 @@
-﻿using UnityEditor;
-using UnityEngine;
-
-namespace Data.Globals
+﻿namespace Data.Globals
 {
     public static class RoomDefaults
     {

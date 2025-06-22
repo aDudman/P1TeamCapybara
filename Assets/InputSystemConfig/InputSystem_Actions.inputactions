@@ -85,6 +85,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Melee",
+                    "type": "Button",
+                    "id": "82b72b63-15a0-478b-9974-1c53f217afef",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -470,6 +479,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "949d6b37-1866-4d04-98eb-c2e098db7106",
+                    "path": "<Keyboard>/j",
+                    "interactions": "SlowTap(duration=3),Press(behavior=1)",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Melee",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

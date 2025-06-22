@@ -31,6 +31,9 @@ namespace Environment.Triggers
         [SerializeField, Tooltip("The western door")]
         private Door leftDoor;
 
+        public event System.Action<GameObject> OnRoomEnter;
+        public event System.Action OnRoomExit;
+
         private void Start()
         {
             roomManager = FindObjectOfType<RoomManager>();
@@ -46,6 +49,11 @@ namespace Environment.Triggers
             {
                 roomCamera.enabled = true;
                 roomCamera.Follow = other.transform;
+
+                if (OnRoomEnter != null)
+                {
+                    OnRoomEnter.Invoke(other.gameObject);
+                }
 
                 AdjacentRooms adjacentRooms = roomManager.GetAdjacentRooms(roomData.position);
                 List<string> adjacentScenes = new List<string>();
@@ -106,12 +114,16 @@ namespace Environment.Triggers
             {
                 roomCamera.enabled = false;
                 roomCamera.Follow = null;
+
+                if (OnRoomExit != null)
+                {
+                    OnRoomExit.Invoke();
+                }
             }
         }
 
         public void SetRoomData(RoomData roomData)
         {
-            Debug.Log($"Setting room data for {gameObject.scene.name}.");
             this.roomData = roomData;
         }
     }

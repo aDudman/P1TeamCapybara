@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Data;
 using Environment.Interactables;
-using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -49,13 +48,14 @@ namespace MainCharacter
         private InputAction actionAction { get; set; }
         #endregion
 
-
-
-
         void Start()
         {
             MCAGENT = this;
             inputDisabled = false;
+            if (spell != null)
+            {
+                EnableSpells();
+            }
             movementAction = InputSystem.actions.FindAction("Move");
             actionAction = InputSystem.actions.FindAction("Action");
         }
@@ -135,7 +135,7 @@ namespace MainCharacter
             if (spellsEnabled && cast)
             {
                 var spellEffect = Instantiate(spell, transform.position, transform.rotation);
-                StartCoroutine(castDelay(3.0f));
+                StartCoroutine(castDelay(1.0f));
             }
         }
 
@@ -179,6 +179,19 @@ namespace MainCharacter
             outMove = difference.normalized * playerSpeed;
 
             return outMove;
+        }
+
+        public void AddSpell(GameObject spellPrefab)
+        {
+            if (spellPrefab != null)
+            {
+                spell = spellPrefab;
+                EnableSpells();
+            }
+            else
+            {
+                Debug.LogWarning("Attempted to add a null spell prefab.");
+            }
         }
 
         public void EnableSpells()

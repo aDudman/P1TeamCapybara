@@ -8,15 +8,15 @@ namespace Shared
     public abstract class DamageableWithIFrames : MonoBehaviour, IDamageable
     {
         [SerializeField, Tooltip("Time in seconds that entity will be invulnerable after taking damage")]
-        private float invulnTimer;
+        protected float invulnTimer;
 
-        private bool isInvuln;
+        protected bool isInvuln;
 
         [SerializeField]
-        private int maxHealth = 100;
+        protected int maxHealth = 100;
 
         [SerializeField, Tooltip("Set to -1 to start with max health")]
-        private int currentHealth = -1;
+        protected int currentHealth = -1;
 
         public delegate void HealthChange(int change, int remaining);
         public event HealthChange OnHealthChanged;
@@ -65,7 +65,7 @@ namespace Shared
             StartCoroutine(StartInvulnTimer(invulnTimer));
         }
 
-        private IEnumerator StartInvulnTimer(float duration)
+        protected IEnumerator StartInvulnTimer(float duration)
         {
             if (duration < 0)
             {
@@ -79,17 +79,17 @@ namespace Shared
         }
 
         // Start is called before the first frame update
-        private void Start()
+        protected void Start()
         {
             if (currentHealth < 0)
             {
                 currentHealth = maxHealth;
             }
 
-            OnHealthChanged += (int change, int remaining) => Debug.Log($"change: {change}, remaining: {remaining}");
+            OnHealthChanged += (int change, int remaining) => Debug.Log($"{gameObject.name} damaged. change: {change}, remaining: {remaining}");
         }
 
-        private void OnDestroy()
+        protected void OnDestroy()
         {
             OnHealthChanged = null;
             OnDeath = null;

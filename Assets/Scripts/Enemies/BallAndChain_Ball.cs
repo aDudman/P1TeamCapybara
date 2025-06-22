@@ -15,17 +15,42 @@ namespace Enemies
         [SerializeField, Tooltip("The desired position when controlled by the boss. Ignored when pushed by the player.")]
         private GameObject target;
 
+        [SerializeField, Tooltip("The main body of the boss.")]
+        private GameObject boss;
+
         [SerializeField, Tooltip("The speed at which the ball moves towards the target when controlled by the boss.")]
         private float speed;
 
         [SerializeField, Tooltip("The GameObject which holds the damage information.")]
         private DamageSource damage;
 
+        [SerializeField, Tooltip("Strength of aim correction, between 0-1")]
+        private float nudgeRatio;
+
+        [SerializeField, Tooltip("The maximum amount of nudge, between 0-2")]
+        private float nudgeCap;
+
         public void Push(Vector3 direction, float force)
         {
             if (isPushable)
             {
-                body.AddForce(direction * force);
+                var finalDirection = direction;
+
+                if (boss != null)
+                {
+                    var bossDirection = (boss.transform.position - transform.position).normalized;
+                    var aimNudge = (bossDirection - direction) * nudgeRatio;
+
+                    if (aimNudge.magnitude < nudgeCap)
+                        finalDirection = (direction + aimNudge).normalized;
+
+                    Debug.Log(direction);
+                    Debug.Log(bossDirection);
+                    Debug.Log(aimNudge);
+                    Debug.Log(finalDirection);
+                }
+
+                body.AddForce((finalDirection * force));
             }
         }
 

@@ -16,7 +16,10 @@ namespace Enemies
         private float moveSpeed = 2f;
 
         [SerializeField]
-        private GameObject ball;
+        private GameObject ballTarget;
+
+        [SerializeField]
+        private BallAndChain_Ball ball;
 
         [SerializeField]
         private float ballSpeed = 5f;
@@ -104,7 +107,7 @@ namespace Enemies
             direction.y = 0;
 
             float distance = direction.magnitude;
-            float movement = moveSpeed * Time.deltaTime;
+            float movement = moveSpeed * Time.fixedDeltaTime;
             float delta = distance - ballDistance;
 
             direction.Normalize();
@@ -130,7 +133,7 @@ namespace Enemies
             angle += ballSpeed * Time.fixedDeltaTime;
             float x = Mathf.Cos(angle) * ballDistance;
             float z = Mathf.Sin(angle) * ballDistance;
-            ball.transform.position = transform.position + new Vector3(x, 0, z);
+            ballTarget.transform.position = transform.position + new Vector3(x, 0, z);
         }
 
         private IEnumerator AttackRoutine()
@@ -167,10 +170,16 @@ namespace Enemies
             Vector3 frontPosition = new Vector3(playerRelativePosition.x, 0, playerRelativePosition.z);
             yield return MoveBallToPosition(frontPosition, 0.4f);
 
-            yield return new WaitForSeconds(1f);
+            // After the attack, allow the player time to push the ball
+            ball.enablePush();
+
+            yield return new WaitForSeconds(3f);
+
+            // Disable pushing after the attack
+            ball.disablePush();
 
             // Set the angle to the current world angle of the ball
-            Vector3 ballOffset = ball.transform.position - transform.position;
+            Vector3 ballOffset = ballTarget.transform.position - transform.position;
             angle = Mathf.Atan2(ballOffset.z, ballOffset.x);
 
             isAttacking = false;
@@ -178,17 +187,17 @@ namespace Enemies
 
         private IEnumerator MoveBallToPosition(Vector3 targetPosition, float duration)
         {
-            Vector3 startPosition = ball.transform.localPosition;
+            Vector3 startPosition = ballTarget.transform.localPosition;
             float elapsedTime = 0;
 
             while (elapsedTime < duration)
             {
-                ball.transform.localPosition = Vector3.Lerp(startPosition, targetPosition, elapsedTime / duration);
+                ballTarget.transform.localPosition = Vector3.Lerp(startPosition, targetPosition, elapsedTime / duration);
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
 
-            ball.transform.localPosition = targetPosition;
+            ballTarget.transform.localPosition = targetPosition;
         }
     }
 }

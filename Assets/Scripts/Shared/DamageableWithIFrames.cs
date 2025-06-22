@@ -86,7 +86,7 @@ namespace Shared
                 currentHealth = maxHealth;
             }
 
-            OnHealthChanged += (int change, int remaining) => Debug.Log($"change: {change}, remaining: {remaining}");
+            OnHealthChanged += (int change, int remaining) => Debug.Log($"{gameObject.name} damaged. change: {change}, remaining: {remaining}");
         }
 
         protected void OnDestroy()

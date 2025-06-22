@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 119935573028536928, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 119935573028536928, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 119935573028536928, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 49.53
       objectReference: {fileID: 0}
     - target: {fileID: 119935573028536928, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -177,7 +177,7 @@ PrefabInstance:
     - target: {fileID: 2928984256869421424, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
       propertyPath: spell
       value: 
-      objectReference: {fileID: 1917575555138074777, guid: 188aa47739fc69c4ca9933c43cf03d79, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2928984256869421424, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
       propertyPath: animator
       value: 
@@ -188,11 +188,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6331293541870683824, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 6331293541870683824, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -48.51
       objectReference: {fileID: 0}
     - target: {fileID: 7937372987043455741, guid: 53ac385d5c099d51fa34144925d2ee1a, type: 3}
       propertyPath: m_Enabled
@@ -385,8 +385,8 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
-  orthographic: 1
+  field of view: 60
+  orthographic: 0
   orthographic size: 10
   m_Depth: -1
   m_CullingMask:

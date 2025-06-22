@@ -1,0 +1,579 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8436373970854568086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Envirenment/Sword4
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Envirenment/Sword4
+  Guid:
+    Data1: -1994742541
+    Data2: 1127650250
+    Data3: 611703474
+    Data4: -1399119864
+  Banks:
+  - {fileID: 3165792956571037506}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5869699536658850386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Envirenment/Sword2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Envirenment/Sword2
+  Guid:
+    Data1: -115426224
+    Data2: 1150184958
+    Data3: 1182206870
+    Data4: 1122204354
+  Banks:
+  - {fileID: 3165792956571037506}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5362627733980558464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Combat/OST_BossFight1_demo
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Combat/OST_BossFight1_demo
+  Guid:
+    Data1: -1232495399
+    Data2: 1235421518
+    Data3: -934713181
+    Data4: -1130022625
+  Banks:
+  - {fileID: 1723844300961941269}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4082338040084490091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Envirenment/Water_PT
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Envirenment/Water_PT
+  Guid:
+    Data1: 505221968
+    Data2: 1326300684
+    Data3: -1366180462
+    Data4: 1021279264
+  Banks:
+  - {fileID: 3165792956571037506}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3648301730376385412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/VO_Bank.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMODBanks/Desktop/VO_Bank.bank
+  Name: VO_Bank
+  StudioPath: bank:/VO_Bank
+  lastModified: 638862039892898896
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2245998675249232137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Envirenment/Sword3
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Envirenment/Sword3
+  Guid:
+    Data1: 1490773828
+    Data2: 1180233731
+    Data3: 1654945451
+    Data4: -336533735
+  Banks:
+  - {fileID: 3165792956571037506}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1272907838238147682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX_UI.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMODBanks/Desktop/SFX_UI.bank
+  Name: SFX_UI
+  StudioPath: bank:/SFX_UI
+  lastModified: 638862039892898896
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1046157419057129452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Envirenment/Sheath
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Envirenment/Sheath
+  Guid:
+    Data1: 1249801294
+    Data2: 1339491802
+    Data3: -1243584851
+    Data4: 616265254
+  Banks:
+  - {fileID: 3165792956571037506}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-738957633634189491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMODBanks/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638862039892487451
+  FileSizes:
+  - Name: 
+    Value: 1652
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -738957633634189491}
+  - {fileID: 18930998694331436}
+  - {fileID: 1723844300961941269}
+  - {fileID: 4147342698558249227}
+  - {fileID: 3165792956571037506}
+  - {fileID: -1272907838238147682}
+  - {fileID: -3648301730376385412}
+  EditorEvents:
+  - {fileID: -2245998675249232137}
+  - {fileID: -1046157419057129452}
+  - {fileID: -4082338040084490091}
+  - {fileID: -5869699536658850386}
+  - {fileID: 8811554808207195379}
+  - {fileID: 1951047814116114220}
+  - {fileID: 8616204884476813790}
+  - {fileID: 3098262026299791835}
+  - {fileID: 5638818852903105583}
+  - {fileID: -8436373970854568086}
+  - {fileID: 3997027519397664391}
+  - {fileID: 1475626274491965871}
+  - {fileID: 5497152874981990484}
+  - {fileID: -5362627733980558464}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 18930998694331436}
+  StringsBanks:
+  - {fileID: -738957633634189491}
+  cacheVersion: 131847
+  cacheTime: 638862039892898896
+  SerializableEventsDict:
+  - key: event:/SFX/Envirenment/Sword3
+    index: 0
+  - key: event:/SFX/Envirenment/Sheath
+    index: 1
+  - key: event:/SFX/Envirenment/Water_PT
+    index: 2
+  - key: event:/SFX/Envirenment/Sword2
+    index: 3
+  - key: event:/SFX/Envirenment/Sfx_sheath_swordv1
+    index: 4
+  - key: event:/SFX/Envirenment/BoulderpushingSFXLoop1
+    index: 5
+  - key: event:/SFX/Envirenment/Sheath2
+    index: 6
+  - key: event:/SFX/Envirenment/BoulderpushingSFXLoop2
+    index: 7
+  - key: event:/SFX/Envirenment/Sword
+    index: 8
+  - key: event:/SFX/Envirenment/Sword4
+    index: 9
+  - key: event:/SFX/UI/Menu/UI_ID
+    index: 10
+  - key: event:/Music/Combat/OST_Combat_Mastered
+    index: 11
+  - key: event:/Music/MainMenu/OST_MainTitle_Demo
+    index: 12
+  - key: event:/Music/Combat/OST_BossFight1_demo
+    index: 13
+--- !u!114 &18930998694331436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMODBanks/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638862039892477692
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1475626274491965871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Combat/OST_Combat_Mastered
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Combat/OST_Combat_Mastered
+  Guid:
+    Data1: -373683426
+    Data2: 1122487486
+    Data3: 1889018552
+    Data4: 817564371
+  Banks:
+  - {fileID: 1723844300961941269}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1723844300961941269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMODBanks/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638862039892852576
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1951047814116114220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Envirenment/BoulderpushingSFXLoop1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Envirenment/BoulderpushingSFXLoop1
+  Guid:
+    Data1: -259158936
+    Data2: 1098831906
+    Data3: -1018070397
+    Data4: 147098546
+  Banks:
+  - {fileID: 3165792956571037506}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3098262026299791835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Envirenment/BoulderpushingSFXLoop2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Envirenment/BoulderpushingSFXLoop2
+  Guid:
+    Data1: 2023507863
+    Data2: 1281271124
+    Data3: 866312108
+    Data4: 1623812618
+  Banks:
+  - {fileID: 3165792956571037506}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3165792956571037506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX_Env.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMODBanks/Desktop/SFX_Env.bank
+  Name: SFX_Env
+  StudioPath: bank:/SFX_Env
+  lastModified: 638862039892888905
+  FileSizes: []
+  Exists: 1
+--- !u!114 &3997027519397664391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/Menu/UI_ID
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/Menu/UI_ID
+  Guid:
+    Data1: -1629747868
+    Data2: 1228066065
+    Data3: -857061198
+    Data4: -190348170
+  Banks:
+  - {fileID: -1272907838238147682}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4147342698558249227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX_Combat.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMODBanks/Desktop/SFX_Combat.bank
+  Name: SFX_Combat
+  StudioPath: bank:/SFX_Combat
+  lastModified: 638862039892862580
+  FileSizes: []
+  Exists: 1
+--- !u!114 &5497152874981990484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MainMenu/OST_MainTitle_Demo
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MainMenu/OST_MainTitle_Demo
+  Guid:
+    Data1: 1381747864
+    Data2: 1333234888
+    Data3: 1485210004
+    Data4: 185700965
+  Banks:
+  - {fileID: 1723844300961941269}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5638818852903105583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Envirenment/Sword
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Envirenment/Sword
+  Guid:
+    Data1: 72014572
+    Data2: 1083037581
+    Data3: -2016738118
+    Data4: 679225436
+  Banks:
+  - {fileID: 3165792956571037506}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8616204884476813790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Envirenment/Sheath2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Envirenment/Sheath2
+  Guid:
+    Data1: -1520481659
+    Data2: 1170482159
+    Data3: -2023238515
+    Data4: -1029663932
+  Banks:
+  - {fileID: 3165792956571037506}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8811554808207195379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Envirenment/Sfx_sheath_swordv1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Envirenment/Sfx_sheath_swordv1
+  Guid:
+    Data1: 221588049
+    Data2: 1266534190
+    Data3: -228410962
+    Data4: 1087944170
+  Banks:
+  - {fileID: 3165792956571037506}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
